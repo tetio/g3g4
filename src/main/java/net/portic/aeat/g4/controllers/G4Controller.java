@@ -18,7 +18,6 @@ public class G4Controller {
     @GetMapping(path = "/maker", produces = "application/json")
     public @ResponseBody G4DecV1Ent makeG4() {
         G4DecV1Ent g4 = g4Service.fromString(new File("src/test/resources/g4_dummy001.xml"));
-        //g4.setId("AABBCCDD");
         G4DecV1Ent updatedG4 = g4Service.save(g4);
         return updatedG4;
     }
