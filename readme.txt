@@ -1,0 +1,1 @@
+https://start.spring.io/#!type=gradle-project&language=java&platformVersion=3.1.2&packaging=jar&jvmVersion=17&groupId=net.portic.g3g4&artifactId=g3g4&name=g3g4&description=Demo%20project%20for%20project%20g3g4&packageName=net.portic.g3g4.g3g4&dependencies=data-mongodb,web

@@ -1,0 +1,32 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.1.2'
+	id 'io.spring.dependency-management' version '1.1.2'
+	id("io.freefair.lombok") version "8.1.0"
+}
+
+group = 'net.portic.g3g4'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	// Persistence
+	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+	// JAXB compatibility
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.1'
+	implementation group: 'com.sun.xml.bind', name: 'jaxb-impl', version: '2.3.4'
+	// Testing
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
