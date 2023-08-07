@@ -44,7 +44,7 @@ class G3g4ApplicationTests {
 		G4DecV1Ent g4 = g4Service.fromString(new File("src/test/resources/g4_dummy001.xml"));
 		when(g4Repository.save(any(G4DecV1Ent.class))).thenReturn(g4);
 
-		g4.setId("AABBCCDD");
+		//g4.setId("AABBCCDD");
 		G4DecV1Ent updatedG4 = g4Service.save(g4);
 		//G4DecV1Ent updatedG4 = g4Repository.save(g4);
 		assertThat(updatedG4).isNotNull();
